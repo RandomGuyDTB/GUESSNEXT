@@ -22,12 +22,3 @@ A guessing game for the TI-83/84(+).
 13. Wait for the copy process to finish and wait an additional ten seconds for TI-Connect to finish calibration.
 14. Unplug your calculator.
 15. Enjoy your game!
-
-## Compatibility
-TI-83     - Unsupported
-
-TI-83+    - Should work; untested
-
-TI-84+    - Tested working
-
-TI-84+ SE - Should work; untested
