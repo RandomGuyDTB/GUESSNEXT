@@ -37,7 +37,7 @@ If C>B
  End
 If A<1
  Then
- Disp "OUT OF GUESSES.
+ Disp "OUT OF GUESSES.","IT WAS:",B
  Return
  End
 Goto B
