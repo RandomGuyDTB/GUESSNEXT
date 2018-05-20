@@ -1,0 +1,43 @@
+Disp "GUESSNEXT","CODED BY","DEVEN BLAKE 2018
+Pause 
+ClrHome
+5->A
+
+//Prepper
+Lbl A
+5+A->A
+Disp "GUESSES:",A
+Pause 
+randInt(1,100)->B
+1->D
+100->E
+ClrHome
+
+//Main loop
+Lbl B
+Disp D,"              TO",E,"","YOUR GUESS?
+Input "> ",C
+A-1->A
+If C=B
+Disp "CORRECT","
+//Seperate IFs so as to avoid memory leakage
+If C=B
+Goto A
+If C<B
+ Then
+ Disp "TOO LOW
+ If C>D
+  C->D
+ End
+If C>B
+ Then
+ Disp "TOO HIGH
+ If C<E
+  C->E
+ End
+If A<1
+ Then
+ Disp "OUT OF GUESSES.
+ Return
+ End
+Goto B
