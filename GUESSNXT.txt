@@ -16,7 +16,14 @@ ClrHome
 //Main loop
 Lbl B
 Disp D,"              TO",E,"","YOUR GUESS?
-Input "> ",C
+Input "> ",Str0
+If Str0="B
+Then
+Disp "CHEATER!!!
+Return
+End
+expr(Str0)->C
+Delvar Str0
 A-1->A
 If C=B
 Disp "CORRECT","
