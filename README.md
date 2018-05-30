@@ -5,7 +5,7 @@ A guessing game for the TI-83/84(+).
 
 ### Required software:
 - [TI-Connect](https://education.ti.com/en/products/computer-software/ti-connect-sw "ti.com")
-- [TokensIDE](https://www.ticalc.org/archives/files/fileinfo/433/43315.html "ticalc.org")
+- [TokensIDE](https://www.ticalc.org/archives/files/fileinfo/433/43315.html "ticalc.org") (if installing from the source code)
 
 ### Installing from the source code:
 01. Download GUESSNXT.txt.
@@ -22,3 +22,14 @@ A guessing game for the TI-83/84(+).
 13. Wait for the copy process to finish and wait an additional ten seconds for TI-Connect to finish calibration.
 14. Unplug your calculator.
 15. Enjoy your game!
+
+### Installing a release:
+01. Go to the releases page and grab GUESSNXT.8xp.
+03. Install TI-Connect.
+04. Plug in your calculator.
+05. Open TI-Connect.
+06. Open your file explorer and navigate to the directory with GUESSNXT in it.
+07. Copy GUESSNXT to your calculator.
+08. Wait for the copy process to finish and wait an additional ten seconds for TI-Connect to finish calibration.
+09. Unplug your calculator.
+10. Enjoy your game!
