@@ -23,7 +23,7 @@ Disp "CHEATER!!!
 Return
 End
 expr(Str0)->C
-Delvar Str0
+DelVar Str0
 A-1->A
 If C=B
 Disp "CORRECT","
