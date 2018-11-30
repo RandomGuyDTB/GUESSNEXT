@@ -1,0 +1,80 @@
+// A    = # Guesses
+// B    = Mystery number
+// Str0 = Guess
+// C    = int of Str0
+// D    = The minimum it could be based on guesses
+// E    =  "  maximum  "
+
+Disp "GUESSNEXT","CODED BY","DEVEN BLAKE 2018 //Introduction copyright thing
+Pause 
+ClrHome
+5->A //You start with 10 guesses, each round (LblA) you get five more.
+     //I'm a terrible person because theoretically the max amount of guesses
+     //even if you're playing perfectly is like sevenish.
+     //I knew this when I first made this and I know it now.
+     //I guess I'll say it's an oppurtunity for an aspiring coder 
+
+//Prepper
+//For restarting the game
+Lbl A
+5+A->A
+Disp "GUESSES:",A
+Pause 
+randInt(1,100)->B
+1->D
+100->E
+ClrHome
+
+//Main loop
+Lbl B
+Disp D,"              TO",E,"","YOUR GUESS?
+
+Input "> ",Str0
+
+//If the player inputs "B" it always evals to the correct
+//Cheat I can't fix: "B/(B*B)" = B so lol oops
+If Str0="B
+Then
+Disp "CHEATER!!!
+Return
+End
+
+expr(Str0)->C
+DelVar Str0
+A-1->A
+If C=B
+Disp "CORRECT","
+
+//Seperate IFs so as to avoid memory leakage
+If C=B
+Goto A
+
+//Lbl A
+//If 1=1
+//Then
+//Goto A
+//    This eventually causes a memory leakage and crash
+//    because some mem is allocated to checking for an End
+//    that'll never come.
+
+If C<B
+ Then
+ Disp "TOO LOW
+ If C>D
+  C->D
+ End
+ 
+If C>B
+ Then
+ Disp "TOO HIGH
+ If C<E
+  C->E
+ End
+ 
+If A<1
+ Then
+ Disp "OUT OF GUESSES.","IT WAS:",B
+ Return
+ End
+
+Goto B
